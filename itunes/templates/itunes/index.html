@@ -1,0 +1,9 @@
+{% extends "itunes/base.html" %}
+{% block content %}
+<h1>Index</h1>
+<ul>
+{% for artist in artists %}
+<li><a href="/keitai/{{artist.id}}/">{{artist.name}}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

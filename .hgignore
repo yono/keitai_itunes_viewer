@@ -1,0 +1,4 @@
+syntax: glob
+*.pyc
+itunes/*.pyc
+.DS_Store
