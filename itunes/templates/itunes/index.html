@@ -1,9 +1,22 @@
 {% extends "itunes/base.html" %}
 {% block content %}
 <h1>Index</h1>
+<a name="top"/>
+
+{% for ia in initials %}
+<a href="#{{ia.initial.id}}">{{ia.initial.name}}</a>
+{% endfor %}
+
+{% for ia in initials %}
+<a name="{{ia.initial.id}}" />
+<a href="#top">一番上へ</a>
+
 <ul>
-{% for artist in artists %}
+{% for artist in ia.artists %}
 <li><a href="/keitai/{{artist.id}}/">{{artist.name}}</a></li>
 {% endfor %}
 </ul>
+
+{% endfor %}
+
 {% endblock content %}
